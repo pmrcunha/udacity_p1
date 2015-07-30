@@ -1,0 +1,203 @@
+/* 1.0 Layout */
+/* General */
+
+* {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+img, embed, object, video {
+	max-width: 100%;
+}
+
+/* Grid */
+
+.grid {
+	max-width: 960px;
+	margin: 0 auto 60px;
+	width: 100%;
+}
+
+.row {
+	width: 100%;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-flex-wrap: wrap;
+	-moz-flex-wrap: wrap;
+	-ms-flex-wrap: wrap;
+	flex-wrap: wrap;
+}
+
+header {
+	width: 100%;
+}
+
+.header_logo {
+	width: 50%;
+}
+
+.header_title {
+	width: 50%;
+}
+
+.hero {
+	width: 100%;
+}
+
+.app_container {
+	width: 100%;
+}
+
+/* Margins and format */
+
+header, main {
+	margin-top: 30px;
+}
+
+.header_title {
+	float: right;
+	text-align: right;
+	vertical-align: middle;
+}
+
+.app_container {
+	text-align: center;
+	margin-top: 20px;
+}
+
+/* Responsive layout and format */
+
+@media screen and (min-width: 450px) {
+	/* Featured apps changes from 1 to 2 columns */
+	.app_container {
+		width: calc((100% - 30px) / 2);
+	}
+	.app_container:first-of-type {
+		margin-right: 30px;
+	}
+
+	.app_container:last-of-type {
+		margin: 40px auto;
+	}
+
+}
+
+@media screen and (min-width: 800px) {
+	/* Featured apps changes to 3 columns */
+	.app_container {
+		width: calc((100% - 60px) / 3);
+		margin-right: 30px;
+	}
+
+	.app_container:last-of-type {
+		margin: 20px 0;
+	}
+}
+
+/* 2.0 Visuals */
+
+body {
+	/* SVG background from http://philbit.com/svgpatterns */
+	background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI1IiBoZWlnaHQ9IjUiPgo8cmVjdCB3aWR0aD0iNSIgaGVpZ2h0PSI1IiBmaWxsPSIjZmZmIj48L3JlY3Q+CjxyZWN0IHdpZHRoPSIxIiBoZWlnaHQ9IjEiIGZpbGw9IiNjY2MiPjwvcmVjdD4KPC9zdmc+");
+}
+
+hr {
+	height: 6px;
+	background-color: #707070;
+	border: none;
+}
+
+a {
+	padding: 5px;
+}
+
+
+
+/* 3.0 Fonts */
+
+h1, h2, h3, h4, p {
+	font: lighter 16px Arial, sans-serif;
+}
+
+a {
+	font: lighter 14px Arial, sans-serif;
+	text-decoration: none;
+	color: red;
+}
+
+a:hover {
+	color: white;
+	background-color: red;
+}
+
+.title, .sub_title {
+	font-family: "Source Code Pro", monospace;
+	font-weight: normal;
+	color: #707070;
+}
+
+.menu_title {
+	text-decoration: underline;
+	color: #404040;
+}
+
+.app_title {
+	text-transform: uppercase;
+	color: #404040;
+}
+
+/* Font Sizes */
+
+.title {
+	font-size: 20px;
+	text-transform: uppercase;
+}
+
+.sub_title {
+	font-size: 16px;
+}
+
+.menu_title {
+	font-size: 20px;
+}
+
+@media screen and (min-width: 350px) {
+	.title {
+		font-size: 28px;
+	}
+	.menu_title {
+		font-size: 24px;
+	}
+	.app_title {
+		font-size: 20px;
+	}
+	a {
+		font-size: 16px;
+	}
+}
+
+@media screen and (min-width: 750px) {
+	.title {
+		font-size: 34px;
+	}
+	.sub_title {
+		font-size: 24px;
+	}
+	.menu_title {
+		font-size: 30px;
+	}
+	.app_title {
+		font-size: 26px;
+	}
+}
+
+
+/* 4.0 Images */
+
+.logo {
+	min-width: 150px;
+}
+
+
