@@ -5,8 +5,11 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<title>Portfolio</title>
-		<link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Source+Code+Pro:200,400'>
+		<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Source+Code+Pro:200,400">
+		<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
 		<link rel="stylesheet" href="css/main.min.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+		<script src="bootstrap/js/bootstrap.min.js"></script>
 	</head>
 
 	<body>
@@ -24,9 +27,18 @@
 					<h3 class="sub_title">Front End Knight</h3>
 				</div><!--.header_title-->
 
+				<nav>
+					<ul class="nav nav-tabs">
+  						<li role="presentation" class="active"><a href="#">Home</a></li>
+  						<li role="presentation"><a href="#projects">Projects</a></li>
+  						<li role="presentation"><a href="#about">About</a></li>
+					</ul>
+				</nav>
 			</header>
 
-			<hr class="divider">
+			
+
+			<hr class="divider">			
 
 			<main>
 				<div class="hero row">
@@ -42,35 +54,108 @@
 					</picture>
 				</div><!--.hero-->
 
-				<section class="app_menu">
+				<section class="app_menu" id="projects">
 
 					<div class="app_menu_title row">
-						<h2 class="menu_title">Featured work</h2>
+						<h2 class="section_title">Featured work</h2>
 					</div><!--.app_menu_title-->
 
 					<div class="app_menu_elements row">
 
 						<div class="app_container">
-							<img src="http://placehold.it/500x350" alt="a screenshot of the app appify">
+							<img src="http://placehold.it/500x350" 
+								 alt="a screenshot of the app appify"
+								 data-toggle="modal"
+								 data-target="#project1"
+								>
 							<h3 class="app_title">Appify</h3>
 							<a href="http://www.github.com/appify">http://www.github.com/appify</a>
 						</div><!--.app_container-->
 
 						<div class="app_container">
-							<img src="http://placehold.it/500x350" alt="a screenshot of the app sunflower">
+							<img src="http://placehold.it/500x350" 
+								 alt="a screenshot of the app sunflower"
+								 data-toggle="modal"
+								 data-target="#project2">
 							<h3 class="app_title">Sunflower</h3>
 							<a href="http://www.github.com/sunflower">http://www.github.com/sunflower</a>
 						</div><!--.app_container-->
 
 						<div class="app_container">
-							<img src="http://placehold.it/500x350" alt="a screenshot of the app bokeh">
+							<img src="http://placehold.it/500x350" 
+								 alt="a screenshot of the app bokeh"
+								 data-toggle="modal"
+								 data-target="#project3">
 							<h3 class="app_title">Bokeh</h3>
 							<a href="http://www.github.com/bokeh">http://www.github.com/bokeh</a>
 						</div><!--.app_container-->
 
 					</div><!--.app_menu_elements-->
 				</section><!--.app_menu-->
+
+				<section class="about_container row" id="about">
+					<h2 class="section_title">About</h2>
+					<p>Bacon ipsum dolor amet ribeye sirloin beef, short loin ham hock pork jowl prosciutto tenderloin meatloaf salami beef ribs hamburger shoulder. Turkey ribeye salami, prosciutto swine strip steak venison flank tri-tip doner tenderloin jerky boudin shank pork chop. Sirloin bacon shoulder turducken beef ribs. Tenderloin andouille porchetta beef ribs ham.<br>
+					<br>
+					Capicola leberkas ham hock, chicken drumstick tenderloin beef jowl ground round prosciutto ham flank boudin porchetta shankle. Pig turducken filet mignon tongue drumstick. Ham prosciutto pork loin sirloin strip steak pig tongue filet mignon boudin andouille pork shankle doner brisket jerky. Tenderloin biltong jerky chicken ball tip sausage kevin alcatra. Picanha capicola rump meatloaf.</p>
+				</section>
 			</main>
-		</div><!--.grid-->
-	</body>
+			</div><!--.grid-->
+
+			<!-- Modals -->
+			<div class="modal fade" id="project1" tabindex="-1" aria-labelledby="myModalLabel" role="dialog" aria-hidden="true">
+				<div class="modal-dialog">
+					<div class="modal-content">
+						<div class="modal-header">
+							<h4 class="modal-title" id="myModalLabel">Appify</h4>
+						</div>
+		      			<div class="modal-body">
+		      				<img src="http://placehold.it/500x350" 
+								 alt="a screenshot of the app appify">
+							<p>The app Appify is going to be a beautiful app. Yada yada yada.</p>
+		      			</div>
+		      			<div class="modal-footer">
+		        			<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+		     			</div>
+		    		</div><!-- /.modal-content -->
+		  		</div><!-- /.modal-dialog -->
+			</div><!-- /.modal --><!-- #project1-->
+
+			<div class="modal fade" id="project2">
+				<div class="modal-dialog">
+					<div class="modal-content">
+						<div class="modal-header">
+							<h4 class="modal-title">Sunflower</h4>
+						</div>
+		      			<div class="modal-body">
+		        			<img src="http://placehold.it/500x350" 
+								 alt="a screenshot of the app sunflower">
+							<p>The app Sunflower is going to be a beautiful app. Yada yada yada.</p>
+		      			</div>
+		      			<div class="modal-footer">
+		        			<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+		     			</div>
+		    		</div><!-- /.modal-content -->
+		  		</div><!-- /.modal-dialog -->
+			</div><!-- /.modal --><!-- #project2-->
+
+			<div class="modal fade" id="project3">
+				<div class="modal-dialog">
+					<div class="modal-content">
+						<div class="modal-header">
+							<h4 class="modal-title">Bokeh</h4>
+						</div>
+		      			<div class="modal-body">
+		        			<img src="http://placehold.it/500x350" 
+								 alt="a screenshot of the app bokeh">
+							<p>The app Bokeh is going to be a beautiful app. Yada yada yada.</p>
+		      			</div>
+		      			<div class="modal-footer">
+		        			<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+		     			</div>
+		    		</div><!-- /.modal-content -->
+		  		</div><!-- /.modal-dialog -->
+			</div><!-- /.modal --><!-- #project3-->
+
+		</body>
 </html>

@@ -8,7 +8,10 @@
 	box-sizing: border-box;
 }
 
-img, embed, object, video {
+img,
+embed,
+object,
+video {
 	max-width: 100%;
 }
 
@@ -21,13 +24,13 @@ img, embed, object, video {
 }
 
 .row {
-	width: 100%;
+  width: 100%;
 	display: -webkit-flex;
 	display: flex;
 	-webkit-flex-wrap: wrap;
 	-moz-flex-wrap: wrap;
 	-ms-flex-wrap: wrap;
-	flex-wrap: wrap;
+	flex-flow: row wrap;
 }
 
 header {
@@ -56,8 +59,9 @@ body {
 	margin: 0 25px;
 }
 
-header, main {
-	margin-top: 30px;
+header,
+main {
+	margin: 30px 0 0;
 }
 
 .header_title {
@@ -66,9 +70,13 @@ header, main {
 	vertical-align: middle;
 }
 
+nav {
+	margin: 20px 0 0;
+}
+
 .app_container {
 	text-align: center;
-	margin-top: 20px;
+	margin: 20px 0 0;
 }
 
 /* Responsive layout and format */
@@ -78,8 +86,9 @@ header, main {
 	.app_container {
 		width: calc((100% - 30px) / 2);
 	}
+
 	.app_container:first-of-type {
-		margin-right: 30px;
+		margin: 20px 30px 0 0;
 	}
 
 	.app_container:last-of-type {
@@ -92,11 +101,11 @@ header, main {
 	/* Featured apps changes to 3 columns */
 	.app_container {
 		width: calc((100% - 60px) / 3);
-		margin-right: 30px;
+		margin: 20px 30px 0 0;
 	}
 
 	.app_container:last-of-type {
-		margin: 20px 0;
+		margin: 20px 0 0 0;
 	}
 }
 
@@ -104,7 +113,8 @@ header, main {
 
 body {
 	/* SVG background from http://philbit.com/svgpatterns */
-	background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI1IiBoZWlnaHQ9IjUiPgo8cmVjdCB3aWR0aD0iNSIgaGVpZ2h0PSI1IiBmaWxsPSIjZmZmIj48L3JlY3Q+CjxyZWN0IHdpZHRoPSIxIiBoZWlnaHQ9IjEiIGZpbGw9IiNjY2MiPjwvcmVjdD4KPC9zdmc+");
+	/* URL is quoted to pass the CSS validator, which only accepts http, not data addresses */
+		background: #ffffff url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI1IiBoZWlnaHQ9IjUiPgo8cmVjdCB3aWR0aD0iNSIgaGVpZ2h0PSI1IiBmaWxsPSIjZmZmIj48L3JlY3Q+CjxyZWN0IHdpZHRoPSIxIiBoZWlnaHQ9IjEiIGZpbGw9IiNjY2MiPjwvcmVjdD4KPC9zdmc+') repeat left top;
 }
 
 hr {
@@ -121,7 +131,11 @@ a {
 
 /* 3.0 Fonts */
 
-h1, h2, h3, h4, p {
+h1,
+h2,
+h3,
+h4,
+p {
 	font: lighter 16px Arial, sans-serif;
 }
 
@@ -134,15 +148,20 @@ a {
 a:hover {
 	color: white;
 	background-color: red;
+	font-weight: bold;
 }
 
-.title, .sub_title {
-	font-family: "Source Code Pro", monospace;
-	font-weight: normal;
+.title {
+	text-transform: uppercase;
+}
+
+.title,
+.sub_title {
+	font: 20px "Source Code Pro", monospace;
 	color: #707070;
 }
 
-.menu_title {
+.section_title {
 	text-decoration: underline;
 	color: #404040;
 }
@@ -153,17 +172,15 @@ a:hover {
 }
 
 /* Font Sizes */
-
-.title {
-	font-size: 20px;
-	text-transform: uppercase;
-}
+/* I am not using shorthand to avoid code repetition. the 'font' attribute requires 
+	a value for 'font-size' and 'font-family'. I change 'font-size' in all media queries, 
+	but I never change the 'font-family' */
 
 .sub_title {
 	font-size: 16px;
 }
 
-.menu_title {
+.section_title {
 	font-size: 20px;
 }
 
@@ -171,12 +188,15 @@ a:hover {
 	.title {
 		font-size: 28px;
 	}
-	.menu_title {
+
+	.section_title {
 		font-size: 24px;
 	}
+
 	.app_title {
 		font-size: 20px;
 	}
+
 	a {
 		font-size: 16px;
 	}
@@ -186,12 +206,15 @@ a:hover {
 	.title {
 		font-size: 34px;
 	}
+
 	.sub_title {
 		font-size: 24px;
 	}
-	.menu_title {
+
+	.section_title {
 		font-size: 30px;
 	}
+
 	.app_title {
 		font-size: 26px;
 	}
@@ -203,5 +226,3 @@ a:hover {
 .logo {
 	min-width: 150px;
 }
-
-
